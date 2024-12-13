@@ -1,22 +1,90 @@
-# Responsible Multimodal Foundation models for Recommender System 
+# Trustworthy Multimodal Foundation models 
 **Welcome to open an issue or make a pull request!** 
 
 <!-- <font size=6><center><big><b> [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) </b></big></center></font> -->
 
-
-**Keyword:** *Recommend System, pretraining, large language model, multimodal recommender system, transferable recommender system, foundation recommender models, *
-
-**Open questions:** 
-
-(1) Pretraining and foundation models for Recommender Systems
-
-(2) Is ID embedding necessary for recommender models, can we replace or abandon it? 
-
-(3) What is the unique gain when recommender systems shift from a matching paradigm to a generating paradigm?
-
-(4) How can (Multimodal) LLM be utilized to enhance recommender systems?
-
-(5) What does the future hold for multimodal recommender systems?
+# Survey and Outlook
+1. [万字长文总结多模态大模型最新进展（Modality Bridging篇）](https://zhuanlan.zhihu.com/p/688215018)
+2. [万字长文总结多模态大模型最新进展（Video篇）](https://zhuanlan.zhihu.com/p/704246896)
+3. [Aligning Large Language Models with Human](https://zhuanlan.zhihu.com/p/693160839)
 
 
-# Paper List 
+# Multimodal Large Language Models
+1. (NVIDIA) [NVLM: Open Frontier-Class Multimodal LLMs](https://zhuanlan.zhihu.com/p/720542712)(三种不同的特征融合框架深度探索)
+2. (Allen Institute for AI) [Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models](https://zhuanlan.zhihu.com/p/720542712)(本文的改进集中在数据侧，包括了一些数据合成的方法，开放了更高质量得多模态数据等)
+3. (MixtralAI) [Pixtral 12B](https://zhuanlan.zhihu.com/p/720542712)(12B接近Qwen2-VL 72B和Llama-3.2 90B水平)
+4. (Rhymes AI) [Aria: An Open Multimodal Native Mixture-of-Experts Mode](https://zhuanlan.zhihu.com/p/720542712)(细粒度混合专家（MoE）架构)
+5. (Apple) [MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning](https://zhuanlan.zhihu.com/p/900354617)(apple：多模态大模型炼丹指南)
+6. (Hugging Face) [Building and better understanding vision-language models: insights and future directions](https://zhuanlan.zhihu.com/p/731680062)(Hugging Face：探索多模态大模型的最佳技术路线)
+7. (Alibaba) [Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution](https://zhuanlan.zhihu.com/p/720542712)(精细的动态分辨率策略+多模态旋转位置嵌入)
+8. [LongLLaVA: Scaling Multi-modal LLMs to 1000 Images Efficiently via Hybrid Architecture](https://huggingface.co/papers/2409.02889)(在单个A100 80GB GPU上可以处理近千张图像)
+9. [MME-RealWorld: Could Your Multimodal LLM Challenge High-Resolution Real-World Scenarios that are Difficult for Humans?](https://zhuanlan.zhihu.com/p/717129017)(最难多模态Benchmark. QwenVL-2第一但未及格！)
+10. [VITA: Towards Open-Source Interactive Omni Multimodal LLM](https://zhuanlan.zhihu.com/p/714031459)(VITA : 首个开源支持自然人机交互的全能多模态大语言模型)
+11. [Beyond LLaVA-HD: Diving into High-Resolution Large Multimodal Models](https://zhuanlan.zhihu.com/p/703258020)(高效处理高分辨率图像的多模态大模型)
+12. [Matryoshka Multimodal Models](https://zhuanlan.zhihu.com/p/700906592)(如何在正确回答视觉问题的同时使用最少的视觉标记？)
+13. [Chameleon: Mixed-Modal Early-Fusion Foundation Models](https://zhuanlan.zhihu.com/p/698911049)(meta: 所有模态都回到token regreesion以达到灵活的理解/生成)
+14. [Flamingo: a Visual Language Model for Few-Shot Learning](https://zhuanlan.zhihu.com/p/688215018)(LLM每一层创建额外的block处理视觉信息)
+15. [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](https://zhuanlan.zhihu.com/p/688215018)(q-former融合视觉-语言信息)
+16. [InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](https://zhuanlan.zhihu.com/p/688215018)(qformer+instruction tuning)
+17. [Visual Instruction Tuning](https://zhuanlan.zhihu.com/p/688215018)(MLP对齐特征，gpt4v生成instruction tuning数据)
+18. [Improved Baselines with Visual Instruction Tuning](https://zhuanlan.zhihu.com/p/688215018)(对于llava数据集以及模型大小的初步scaling)
+19. [LLaVA-NeXT: Improved reasoning, OCR, and world knowledge](https://zhuanlan.zhihu.com/p/688215018)(分辨率*4，数据集更大)
+20. [Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models](https://zhuanlan.zhihu.com/p/688215018)(一种端到端的优化方案，通过轻量级适配器连接图像编码器和LLM)
+21. [MIMIC-IT: Multi-Modal In-Context Instruction Tuning](https://zhuanlan.zhihu.com/p/688215018)( MIMIC-IT包含多个图片或视频的输入数据，并支持多模态上下文信息)
+22. [LLaVAR: Enhanced Visual Instruction Tuning for Text-Rich Image Understanding](https://zhuanlan.zhihu.com/p/688215018)(使用公开可用的OCR工具在LAION数据集的422K个文本丰富的图像上收集结果)
+23. [SVIT: Scaling up Visual Instruction Tuning](https://zhuanlan.zhihu.com/p/688215018)(一个包含420万个视觉指导调整数据点的数据集)
+24. [Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://zhuanlan.zhihu.com/p/688215018)(cross attention对齐特征，更大的第一阶段训练数据)
+25. [NExT-GPT: Any-to-Any Multimodal LLM](https://zhuanlan.zhihu.com/p/688215018)(端到端通用的任意对任意MM-LLM（Multimodal-Large Language Model）系统)
+26. [InternLM-XComposer: A Vision-Language Large Model for Advanced Text-image Comprehension and Composition](https://zhuanlan.zhihu.com/p/688215018)(视觉信息的压缩采样)
+27. [CogVLM: Visual Expert for Pretrained Language Models](https://zhuanlan.zhihu.com/p/688215018)(在LLM的各层添加visual expert，它具有独立的QKV和FFN相关的参数)
+28. [OtterHD: A High-Resolution Multi-modality Model](https://zhuanlan.zhihu.com/p/688215018)(专门设计用于以细粒度精度解释高分辨率视觉输入)
+29. [Monkey : Image Resolution and Text Label Are Important Things for Large Multi-modal Models](https://zhuanlan.zhihu.com/p/688215018)(Monkey模型提出了一种有效地提高输入分辨率的方法，最高可达 896 x 1344 像素)
+30. [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](https://zhuanlan.zhihu.com/p/688215018)(LLaMA-VID赋予现有框架支持长达一小时的视频，并通过额外的上下文标记推动了它们的上限)
+31. [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](https://zhuanlan.zhihu.com/p/688215018)(解决了多模态稀疏学习中的性能下降问题)
+32. [LLaVA-UHD: an LMM Perceiving Any Aspect Ratio and High-Resolution Images](https://zhuanlan.zhihu.com/p/688215018)(高效处理任何纵横比和高分辨率的图像)
+33. [Yi-VL](https://zhuanlan.zhihu.com/p/688215018)(Yi-VL采用了LLaVA架构，经过全面的三阶段训练过程，以将视觉信息与Yi LLM的语义空间良好对齐：)
+34. [Mini-Gemini](https://zhuanlan.zhihu.com/p/693063778)(双视觉编码器，使用低分辨率的视觉编码器特征作为query，将高分辨率特征作为key 和value进行token mining)
+35. [Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding](https://zhuanlan.zhihu.com/p/704246896)(采用了一组动态视觉tokens来统一表示图像和视频。使模型能够高效利用有限数量的视觉tokens，同时捕捉图像所需的空间细节和视频所需的全面时间关系。)
+36. [VILA: On Pre-training for Visual Language Models](https://zhuanlan.zhihu.com/p/704246896)(交错的预训练数据是有益的，而单纯的图像-文本对并非最佳选择。)
+37. [ST-LLM: Large Language Models Are Effective Temporal Learners](https://zhuanlan.zhihu.com/p/704246896)(ST-LLM提出了一种动态掩码策略，并设计了定制的训练目标。此外，针对特别长的视频，设计了一个全局-局部输入模块，以平衡效率和效果。)
+38. [Video-LLaVA: Learning United Visual Representation by Alignment Before Projection](https://zhuanlan.zhihu.com/p/704246896)(用视频特有的encoder提升视频理解能力而非image encoder)
+
+# BenchMark and Dataset
+1. [MME-RealWorld: Could Your Multimodal LLM Challenge High-Resolution Real-World Scenarios that are Difficult for Humans?](https://zhuanlan.zhihu.com/p/717129017)(最难多模态Benchmark. QwenVL-2第一但未及格！)
+2. [MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark](https://hub.baai.ac.cn/paper/baeaa2a4-4374-4cf3-927e-82df61ec3e8e)(MMMU的进阶版，更注重图像的感知对问题的影响)
+3. [From Pixels to Prose: A Large Dataset of Dense Image Captions](https://arxiv.org/pdf/2406.10328)(1600万生成的image-text pair，利用尖端的视觉语言模型(Gemini 1.0 Pro Vision)进行详细和准确的描述。)
+4. [ShareGPT4Video: Improving Video Understanding and Generation with Better Captions](https://zhuanlan.zhihu.com/p/704246896)(40k from gpt4-v, 4814k生成于自己训练的模型)
+5. [OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](https://arxiv.org/pdf/2306.16527)(141 million web pages extracted from Common Crawl, 353 million associated images, and 115 billion text tokens)
+6. [Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning](https://arxiv.org/abs/2306.14565)(在数据层面，以细粒度片段级更正的形式收集人类反馈；在方法层面，我们提出了密集直接偏好优化(DDPO))
+7. [Multimodal Self-Instruct: Synthetic Abstract Image and Visual Reasoning Instruction Using Language Model](https://arxiv.org/abs/2407.07053)(在数据层面, 通过代码作为媒介合成抽象图表,并且 benchmarking 了当前多模态模型在抽象图的理解上的不足.)
+# Unify Multimodal Understanding and Generation
+
+1. [Chameleon: Mixed-Modal Early-Fusion Foundation Models](https://zhuanlan.zhihu.com/p/719475102)(Meta FAIR：“早期融合”的方法使得模型能够跨模态推理和生成真正的混合文档。)
+2. [Show-o: One Single Transformer to Unify Multimodal Understanding and Generation](https://zhuanlan.zhihu.com/p/719475102)(NUS&ByteDance：文本作为离散标记进行自回归建模，而连续图像像素则使用去噪扩散建模。)
+3. [Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model](https://zhuanlan.zhihu.com/p/719475102)(Meta：采用了文本的下一个标记预测和图像的扩散作为目标函数,在不增加计算成本的前提下，实现了更好的模态整合与生成效果。)
+4. [VILA-U: a Unified Foundation Model Integrating Visual Understanding and Generation](https://zhuanlan.zhihu.com/p/785607305)(清华&MIT：统一视频理解与生成)
+5. [MoMa: Efficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts](https://zhuanlan.zhihu.com/p/858555788)(META：MOE是混合模态理解/生成的最佳选择)
+6. [MIO: A Foundation Model on Multimodal Tokens](https://zhuanlan.zhihu.com/p/2186671721)(01AI: 四模态理解/生成大一统)
+7. [Harmonizing Visual Text Comprehension and Generation](https://arxiv.org/abs/2407.16364)(ECNU&ByteDance：结合视觉编码器、LLM、图像解码器实现多模态输入输出)
+8. [SEED-X: Multimodal Models with Unified Multi-granularity Comprehension and Generation](https://arxiv.org/abs/2404.14396) (Tencent AI Lab：采用预训练的视觉分词器（如ViT）来统一图像理解和生成任务)
+9. [NExT-GPT: Any-to-Any Multimodal LLM](https://arxiv.org/abs/2309.05519)(NUS：使用预训练的编码器、扩散解码器和LLM，结合模态对齐训练和Lora指令微调实现any2any模态任务)
+10. [Any-to-Any Generation via Composable Diffusion](https://arxiv.org/abs/2305.11846)(Microsoft：组合各种模态的扩散模型，实现多模态并行生成)
+11. [X-VILA: Cross-Modality Alignment for Large Language Model](https://arxiv.org/abs/2405.19335)(Nvidia&HKUST：将单模编码器与大型语言模型（LLM）的输入对齐，以及将单模扩散解码器与LLM的输出对齐，实现跨模态的理解、推理和生成)
+12. [DreamLLM: Synergistic Multimodal Comprehension and Creation](https://arxiv.org/abs/2309.11499)(XJU&IIISCT：解决MLLMs在多模态理解与创造中的协同问题，直接在原始多模态空间中采样，生成语言和图像后验)
+13. [Jointly Training Large Autoregressive Multimodal Models](https://arxiv.org/abs/2309.15564)(Meta AI：融合了现有的文本和图像生成模型，并引入了一种专门的、数据高效的指令调整策略)
+14. [VL-GPT: A Generative Pre-trained Transformer for Vision and Language Understanding and Generation](https://arxiv.org/abs/2312.09251)(XJU&Tencent AI Lab：使用一个新的图像分词器-解码器框架将原始图像转换为连续的视觉嵌入序列，使用NTP训练目标实现图像文本统一预训练)
+15. [Emu:Generative pretraining in multimodality](https://arxiv.org/abs/2307.05222)(BAAI&THU：一个基于Transformer的多模态基础模型采用统一的自回归训练目标，通过预测多模态序列中的下一个元素（无论是文本标记还是视觉嵌入）进行训练)
+16. [Video-LaVIT: Unified Video-Language Pre-training with Decoupled Visual-Motional Tokenization](https://arxiv.org/abs/2402.03161)(PKU&快手：将视频分解为关键帧和运动向量，视频、图像和文本数据统一为1D离散标记)
+17. [Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models](https://arxiv.org/abs/2403.18814)(CUHK：使用视觉双编码器处理高分辨率图像，文本自回归生成，图像使用扩散模型生成)
+18. [World Model on Million-Length Video And Language With Blockwise RingAttention](https://arxiv.org/abs/2402.08268)(UC Berkeley：使用VQGAN将图像/视频离散化，理解生成统一为NTP任务，使用RingAttention、渐进式训练等技术将上下文窗口扩大到1M tokens)
+19. [Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Action](https://arxiv.org/abs/2312.17172)(AI2&UIUC：将不同模态的输入和输出（如图像、文本、音频、动作等）标记化（tokenize）到一个共享的语义空间中，然后使用单一的编码器-解码器变换器模型进行处理)
+20. [AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling](https://arxiv.org/abs/2402.12226)(复旦：使用离散的标记来表示不同的模态（如图像、音乐、语音和文本）)
+21. [Write and Paint: Generative Vision-Language Models are Unified Modal Learners](https://arxiv.org/abs/2206.07699)(HKUST&ByteDance：结合前缀语言建模和前缀图像建模的Dacinci模型)
+22. [Gemini: A family of highly capable multimodal models](https://arxiv.org/abs/2312.11805)(Google Gemini Team：解决跨图像、音频、视频和文本理解的任务中的高级推理和语言理解问题)
+23. [Minigpt-5: Interleaved vision-and-language generation via generative vokens](https://arxiv.org/abs/2310.02239)(UCSC：引入生成性视觉标记（Generative Vokens）)
+24. [Mm-interleaved: Interleaved image-text generative modeling via multi-modal feature synchronizer](https://arxiv.org/abs/2401.10208)(Shanghai AI Lab：集成图像编码器、大型语言模型（LLM）和图像解码器)
+25. [OMCAT: Omni Context Aware Transformer](https://arxiv.org/abs/2410.12109)(NVIDIA：跨模态时间理解，利用RoTE（Rotary Time Embeddings）通过嵌入绝对和相对时间信息到音频和视觉特征中)
+26. [Baichuan-Omni Technical Report](https://arxiv.org/abs/2410.08565)(百川&西湖大学&浙大：全模态模型)
+27. [Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation](https://arxiv.org/abs/2410.13848)(DeepSeek-AI&HKU：针对多模态理解和多模态生成解耦视觉编码)
+28. [Emu3: Next-Token Prediction is All You Need](https://arxiv.org/abs/2409.18869)(BAAI：视觉标记离散化，使用DPO进行对齐)
+29. [VITRON: A Unified Pixel-level Vision LLM for Understanding, Generating, Segmenting, Editing](https://github.com/SkyworkAI/Vitron)(NUS&NTU：离散文本和连续信号的混合指令传递方法，像素级时空视觉-语言对比学习)(Neurips2024)
